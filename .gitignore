@@ -1,0 +1,5 @@
+# ========IGNORING THE FOLLOWING FILES==================
+*.o
+*.out
+catalog.sqlite
+sftp-config.json

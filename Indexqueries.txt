@@ -1,0 +1,13 @@
+CREATE INDEX i_p_partkey TABLE part ON p_partkey
+DROP INDEX i_p_partkey
+CREATE INDEX i_c_custkey TABLE customer ON c_custkey
+DROP INDEX i_c_custkey
+CREATE INDEX i_o_orderkey TABLE orders ON o_orderkey
+DROP INDEX i_o_orderkey
+CREATE INDEX i_r_regionkey TABLE region ON r_regionkey
+DROP INDEX i_r_regionkey
+CREATE INDEX i_l_orderkey TABLE lineitem ON l_orderkey
+DROP INDEX i_l_orderkey
+
+CREATE TABLE customer_copy(c_custkey INTEGER, c_name STRING, c_address STRING, c_nationkey INTEGER, c_phone STRING, c_acctbal FLOAT, c_mktsegment STRING, c_comment STRING)
+LOAD DATA customer_copy FROM '/home/jun/.sqlite-jarvis/text/customer.tbl'
